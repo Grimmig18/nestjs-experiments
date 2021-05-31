@@ -4,20 +4,18 @@ import { EmailValidationPipe } from '../pipes/email-validation.pipe'
 
 export class CreateUserDto {
 
-    @ApiProperty()
+    @ApiProperty({ example: "Hans Peter"})
     name: string
 
     @ApiProperty({example: "user@test.com"})
-    @Validate(EmailValidationPipe, {
-        
-    })
+    @Validate(EmailValidationPipe)
     email: string
 
-    @ApiProperty()
+    @ApiProperty({ example: 21 })
     age: number
 
     verified: boolean
 
-    @ApiProperty()
+    @ApiProperty({ example: "5up3r_53cur3"})
     password: string
 }

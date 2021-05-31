@@ -96,6 +96,7 @@ export class UserService {
             throw new NotFoundException(`User with userId ${userSession.userId} not found.`)
         }
 
+
         return user
     }
 
