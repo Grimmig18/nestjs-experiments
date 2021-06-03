@@ -8,10 +8,11 @@ export class DefaultUserGuard implements CanActivate {
     canActivate(
         context: ExecutionContext
     ): boolean | Promise<boolean> {
-        console.log(context.switchToHttp().getRequest().body)
-        const userSession = this.userService.validateSession(context.switchToHttp().getRequest().body)
+        // console.log(context.switchToHttp().getRequest().body)
+        // const userSession = this.userService.validateSession(context.switchToHttp().getRequest().body)
 
-        // Return true of session is set, false if session isn't set
-        return !!userSession
+        // // Return true of session is set, false if session isn't set
+        // return !!userSession
+        return true
     }
 }
